@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
+// import { Inter } from "@next/font/google";
 import "../styles/Home.module.css";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -16,6 +16,8 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Do not add <script> tags using next/head (see <script> tag with src="https://kit.fontawesome.com/67c66657c7.js").
+        Use next/script instead. See more info here: https://nextjs.org/docs/messages/no-script-tags-in-head-component */}
         <script async src="https://kit.fontawesome.com/67c66657c7.js"></script>
       </Head>
 

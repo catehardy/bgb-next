@@ -221,7 +221,6 @@
   
   .grid-item-2 {
     grid-area: article-1;
-    margin-right: -5px;
     width: 400px;
     height: auto;
     border-radius: 4px;
@@ -230,6 +229,7 @@
   .grid-item-3 {
     grid-area: article-2;
     background: var(--bright-turquoise);
+    margin-left: -5px;
     margin-right: -5px;
     margin-bottom: -2.5px;
   }
@@ -243,6 +243,7 @@
   .grid-item-5 {
     grid-area: article-4;
     background: var(--peach);
+    margin-left: -5px;
     margin-right: -5px;
     margin-top: -2.5px;
   }
