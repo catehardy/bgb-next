@@ -2,8 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import "../styles/Home.module.css";
 import "./search.js";
+import React, { useEffect } from "react";
 
+console.log('this is the root level of index.js');
 export default function Home() {
+  useEffect(() => {
+    console.log('this is inside useEffect, so it loads only in the client side');
+  }, []);
+  console.log('this is inside the home function');
   return (
     <>
       <Head>
@@ -204,8 +210,8 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="grid-item grid-item-7">carousel 1</div>
-              <div className="grid-item grid-item-8">carousel 2</div>
+              <div className="grid-item grid-item-7">carousel 1: Kickstarter Games</div>
+              <div className="grid-item grid-item-8">carousel 2: New Games</div>
             </div>
           </main>
           <footer>Board Game Buddy &#169; 2023</footer>

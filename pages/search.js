@@ -53,6 +53,7 @@ function empty(element) {
 }
 
 // manage search dropdown visibility
+// Note: The if statement is needed because 'document' and 'window' are only available inside the browser and not on the server - replace this with useEffect hook later
 if (typeof window === "object") {
   showSearchDropdown = () =>
     document.getElementById("search-dropdown").classList.add("show");
