@@ -1,9 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-// import { Inter } from "@next/font/google";
 import "../styles/Home.module.css";
-
-// const inter = Inter({ subsets: ["latin"] });
+import "./search.js";
 
 export default function Home() {
   return (
@@ -27,7 +25,7 @@ export default function Home() {
 
             <nav>
               <h1 className="icon gradient-text">
-                <a href="index.html">BGB</a>
+                <a href="./">BGB</a>
               </h1>
 
               <div className="search-box">

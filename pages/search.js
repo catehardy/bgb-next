@@ -53,16 +53,18 @@ function empty(element) {
 }
 
 // manage search dropdown visibility
-showSearchDropdown = () =>
-  document.getElementById("search-dropdown").classList.add("show");
-hideSearchDropdown = () =>
-  document.getElementById("search-dropdown").classList.remove("show");
-// hide search dropdown if user clicks away
-window.onclick = function (e) {
-  if (!e.target.matches(".dropdown-content")) {
-    hideSearchDropdown();
-  }
-};
+if (typeof window === "object") {
+  showSearchDropdown = () =>
+    document.getElementById("search-dropdown").classList.add("show");
+  hideSearchDropdown = () =>
+    document.getElementById("search-dropdown").classList.remove("show");
+  // hide search dropdown if user clicks away
+  window.onclick = function (e) {
+    if (!e.target.matches(".dropdown-content")) {
+      hideSearchDropdown();
+    }
+  };
+}
 
 // create text links - used for search dropdown
 function link(text, href) {
@@ -73,17 +75,19 @@ function link(text, href) {
 }
 
 function main() {
-  const userClick = document.getElementById("user-submission");
-  const userEnter = document.getElementById("boardgame-searchfield");
+  if (typeof window === "object") {
+    const userClick = document.getElementById("user-submission");
+    const userEnter = document.getElementById("boardgame-searchfield");
 
-  userClick.addEventListener("click", displayResult);
+    userClick.addEventListener("click", displayResult);
 
-  userEnter.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      displayResult();
-    }
-  });
+    userEnter.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        displayResult();
+      }
+    });
+  }
 }
 
 main();
