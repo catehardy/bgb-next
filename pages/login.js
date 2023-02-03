@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+// WIP - seeing how to add Firebase auth
+
 export default function Login() {
   return (
     <>
